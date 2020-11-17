@@ -1,0 +1,22 @@
+.app__login{
+    
+    padding:10px;
+    .header{
+        border: 1px solid darkseagreen;
+        background-color: springgreen;
+        width: calc(#{$app-width} - #{$delta-w});
+        padding: 5px;
+        text-align: left;
+        p{
+            font-size: 18px;
+            color:black;
+        }
+    }
+    .content{
+        width:100%;
+        height: 20px;
+        font-size: 15px;
+        display: flex;
+        justify-content:jspace-between;
+    }
+}

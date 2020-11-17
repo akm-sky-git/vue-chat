@@ -2,12 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import "~normalize.css";
 @import "variable";
+@import "login";
+@import "usersList";
 
-/* @import "header";
-@import "toolbar";
-@import "formula";
-@import "table";
- */
 
 *{
     margin: 0;
@@ -21,11 +18,16 @@ body {
 
 
 .app__chat {
+    top:30px;
     position: relative;
-    align-content: center;
+    display: flex;
+    justify-content: center;
    
 }
-
+.app__chat__cont{
+    position: absolute;
+    height: 100%;
+}
 .app__chat__header{
     border: 1px solid darkseagreen;
     background-color: springgreen;
@@ -39,9 +41,26 @@ body {
      
 
 }
+.app__chat__text{
+    border-top: 1px solid springgreen;
+    overflow-y: auto;
+    width: calc(#{$app-width} - #{$delta-w});
+    height: 260px;
+    font-size: 18px;
+    padding: 5px;
+    scroll-snap-type: y mandatory;
+}
+.app__chat__footer{
+    border-top: 1px solid springgreen;
+    padding: 10px;
+    width:100%;
+    height: 60px;
+}
 .app__chat__user{
     border: 1px solid springgreen;
     width: $app-width;
+    height: $app-height;
     padding: 10px;
     font-size: 15px;
+   
 }

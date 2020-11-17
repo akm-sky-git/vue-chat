@@ -1,15 +1,17 @@
 <template>
             <div class="app__chat__user">
                     <h2>Чат : {{userName}} с {{partnerName}}</h2>
-                   
-                        <div v-for="(item,index) in userText" v-bind:key="index">
-                           {{item.user}}:{{item.msg}}
-                        </div>
-        
-                 
-                   <p>Сообщение от {{userName}}:</p>
-                   <input type="text" v-model="userMesg"/>
-                   <button @click="addMsg">Отправить сообщение</button>
+
+                     <div class="app__chat__text">
+                              <div v-for="(item,index) in userText" v-bind:key="index" style="scroll-snap-align:start;">
+                                 <h4>{{item.user}}:</h4>{{item.msg}}
+                              </div>
+                      </div>
+                   <div class="app__chat__footer">
+                           <p>Сообщение от {{userName}}:</p>
+                           <input type="text" v-model="userMesg"/>
+                           <button @click="addMsg">Отправить сообщение</button>
+                   </div>
             </div>
       
 </template>
