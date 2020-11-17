@@ -1,0 +1,21 @@
+@import "variable";
+
+.app__chat__users__header{
+    border: 1px solid darkseagreen;
+    background-color: springgreen;
+    
+    padding: 5px;
+    text-align: left;
+    p{
+        font-size: 20px;
+        color:black;
+    }
+}
+.app__chat__users__list{
+    border: 1px solid darkseagreen;
+    width: $app-width+$app-width;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    padding-left: 45px;
+} 
